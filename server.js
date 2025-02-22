@@ -11,7 +11,7 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+/*
 // Database Connection
 mongoose.connect("mongodb://localhost/pizza", {
   useNewUrlParser: true,
@@ -24,7 +24,7 @@ connection.once("open", () => {
 connection.on("error", (err) => {
   console.log("Connection failed", err);
 });
-
+*/
 // Middleware
 app.use(cors());
 app.use(express.json());
