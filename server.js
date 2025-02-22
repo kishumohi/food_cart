@@ -70,7 +70,9 @@ app.set("view engine", "ejs");
 
 // Routes
 require("./routes/web.js")(app);
-
+app.get("/", (req, res) => {
+  res.json({ message: "Working" });
+});
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
