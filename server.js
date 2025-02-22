@@ -13,13 +13,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Database Connection
-mongoose.connect(
-  "mongodb+srv://admin:admin@bookscluster.ggkrh6v.mongodb.net/foodzone",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Database connected");
@@ -35,8 +32,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Session Store
 const mongoStore = MongodbStore.create({
-  mongoUrl:
-    "mongodb+srv://admin:admin@bookscluster.ggkrh6v.mongodb.net/foodzone",
+  mongoUrl: process.env.MONGO_URI,
   collectionName: "sessions",
 });
 
