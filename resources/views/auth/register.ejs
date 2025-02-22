@@ -1,0 +1,66 @@
+<section class="login flex min-h-full flex-col justify-center px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6 p-12 rounded-md bg-white" action="#" method="POST">
+      <div>
+        <label for="name" class="block text-sm/6 font-medium text-gray-900"
+          >Name</label
+        >
+        <div class="mt-2">
+          <input
+            type="name"
+            name="name"
+            id="name"
+            placeholder="Enter Your Name"
+            required
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm/6"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm/6 font-medium text-gray-900"
+          >Email</label
+        >
+        <div class="mt-2">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your Email"
+            required
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm/6"
+          />
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between">
+          <label
+            for="password"
+            class="block text-sm/6 font-medium text-gray-900"
+            >Password</label
+          >
+        </div>
+        <div class="mt-2">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-gray-600 sm:text-sm/6"
+          />
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <button
+          type="submit"
+          class="flex rounded-full btn-primary justify-center px-6 py-2 text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+        >
+          Register
+        </button>
+        <a href="/login" class="font-semibold">Already have account?</a>
+      </div>
+    </form>
+  </div>
+</section>
