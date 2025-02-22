@@ -11,12 +11,15 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-/*
+
 // Database Connection
-mongoose.connect("mongodb://localhost/pizza", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://admin:admin@bookscluster.ggkrh6v.mongodb.net/foodzone",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 const connection = mongoose.connection;
 connection.once("open", () => {
   console.log("Database connected");
@@ -24,7 +27,7 @@ connection.once("open", () => {
 connection.on("error", (err) => {
   console.log("Connection failed", err);
 });
-*/
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -32,7 +35,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Session Store
 const mongoStore = MongodbStore.create({
-  mongoUrl: "mongodb://localhost/pizza",
+  mongoUrl:
+    "mongodb+srv://admin:admin@bookscluster.ggkrh6v.mongodb.net/foodzone",
   collectionName: "sessions",
 });
 
